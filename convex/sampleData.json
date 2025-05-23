@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Arijit Singh Live in Concert",
+    "description": "Experience the soulful voice of Arijit Singh live in concert!",
+    "price": 2999.00,
+    "totalTickets": 500,
+    "location": "NSCI Dome, Mumbai",
+    "eventDate": 1731100800000,
+    "userId": "user_IN1ArijitConcertMumbai2025"
+  },
+  {
+    "name": "Sunburn Festival Goa 2025",
+    "description": "Asia’s biggest EDM festival returns to Goa!",
+    "price": 5999.00,
+    "totalTickets": 2000,
+    "location": "Vagator Beach, Goa",
+    "eventDate": 1732924800000,
+    "userId": "user_IN2SunburnGoa2025"
+  },
+  {
+    "name": "Shreya Ghoshal – Symphony Night",
+    "description": "An enchanting evening of melodies with Shreya Ghoshal.",
+    "price": 1999.00,
+    "totalTickets": 300,
+    "location": "Siri Fort Auditorium, New Delhi",
+    "eventDate": 1731619200000,
+    "userId": "user_IN3ShreyaDelhi2025"
+  },
+  {
+    "name": "Diljit Dosanjh India Tour",
+    "description": "Get ready for a high-energy Punjabi concert with Diljit Dosanjh!",
+    "price": 2499.00,
+    "totalTickets": 800,
+    "location": "Bangalore Palace Grounds, Bengaluru",
+    "eventDate": 1732300800000,
+    "userId": "user_IN4DiljitBangalore2025"
+  },
+  {
+    "name": "Coke Studio India Live",
+    "description": "Enjoy India’s top musical talents in a Coke Studio live experience.",
+    "price": 1799.00,
+    "totalTickets": 1000,
+    "location": "Phoenix Marketcity, Pune",
+    "eventDate": 1731964800000,
+    "userId": "user_IN5CokeStudioPune2025"
+  },
+  {
+    "name": "Virat Kohli Test Retirement Tour",
+    "description": "Witness the end of an era — Virat Kohli's farewell Test series.",
+    "price": 3499.00,
+    "totalTickets": 750,
+    "location": "Eden Gardens, Kolkata",
+    "eventDate": 1732748400000,
+    "userId": "user_IN6KohliFarewellTour2025"
+  },
+  {
+    "name": "RCB Champions Parade",
+    "description": "Celebrate with RCB as they parade the IPL 2025 trophy through Bengaluru!",
+    "price": 0.00,
+    "totalTickets": 10000,
+    "location": "MG Road to Chinnaswamy Stadium, Bengaluru",
+    "eventDate": 1733097600000,
+    "userId": "user_IN7RCBParade2025"
+  }
+]
