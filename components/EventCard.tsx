@@ -5,9 +5,10 @@ import { Id } from '@/convex/_generated/dataModel'
 import { useStorageUrl } from '@/lib/utils'
 import { useUser } from '@clerk/nextjs'
 import { useQuery } from 'convex/react'
-import { CalendarDays, Check, CheckCheck, CircleArrowRight, LoaderCircle, MapPin, PencilIcon, PencilLine, PencilOff, StarIcon, Ticket, XCircle } from 'lucide-react'
+import { CalendarDays, CheckCheck, CircleArrowRight, LoaderCircle, MapPin, PencilIcon, StarIcon, Ticket, XCircle } from 'lucide-react'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
+import PurchaseTicket from './PurchaseTicket'
 
 function EventCard({ eventId }: { eventId: Id<"events"> }) {
 

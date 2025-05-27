@@ -5,6 +5,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { ConvexClientProvider } from "@/components/ConvexClientProvider";
 import Header from "@/components/Header";
 import SyncUsersWithConvex from "@/components/SyncUsersWithConvex";
+import { Toaster } from "sonner";
 
 // Configure Questrial
 const questrial = Questrial({
@@ -37,6 +38,7 @@ export default function RootLayout({
             <Header />
             <SyncUsersWithConvex />
             {children}
+            <Toaster />
           </ClerkProvider>
         </ConvexClientProvider>
       </body>
