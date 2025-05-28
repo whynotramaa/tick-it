@@ -150,7 +150,7 @@ function EventForm({ mode, initialData }: EventFormProps) {
             } catch (error) {
                 console.log("Failure in submitting form",error)
                 toast("Uh Oh! Something went wrong", {
-                    variant: "destructive",
+                    // variant: "destructive",
                     description:"There was a problem with your request"
                 })
 
