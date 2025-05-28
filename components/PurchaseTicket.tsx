@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
 import ReleaseTicket from "./ReleaseTicket"
 import { Id } from "@/convex/_generated/dataModel"
+import { createStripeCheckoutSession } from "@/actions/createStripeCheckoutSession"
 
 
 function PurchaseTicket({ eventId }: { eventId: Id<"events"> }) {
@@ -52,7 +53,22 @@ function PurchaseTicket({ eventId }: { eventId: Id<"events"> }) {
     }, [offerExpiresAt, isExpired]);
 
     // stripe checkout
-    const handlePurchase = async() => { }
+    const handlePurchase = async () => {
+        if (!user) return
+        try {
+            setIsLoading(true)
+            const { sessionUrl } = await createStripeCheckoutSession({ eventId })
+            if (sessionUrl) {
+                window.location.href = sessionUrl // ✅ Use this for external redirects
+            } else {
+                console.error("No sessionUrl returned")
+            }
+        } catch (error) {
+            console.log(error)
+        } finally {
+            setIsLoading(false)
+        }
+    }
 
     if (!user || !queuePosition || queuePosition?.status !== "offered") return null
 
