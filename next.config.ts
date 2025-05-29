@@ -6,6 +6,10 @@ const nextConfig: NextConfig = {
       {
         protocol: "https",
         hostname: "youthful-fox-952.convex.cloud"
+      },
+      {
+        protocol: "https",
+        hostname: "confident-porpoise-865.convex.cloud"
       }
     ]
   }
