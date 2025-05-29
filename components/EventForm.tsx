@@ -148,10 +148,10 @@ function EventForm({ mode, initialData }: EventFormProps) {
                 }
 
             } catch (error) {
-                console.log("Failure in submitting form",error)
+                console.log("Failure in submitting form", error)
                 toast("Uh Oh! Something went wrong", {
                     // variant: "destructive",
-                    description:"There was a problem with your request"
+                    description: "There was a problem with your request"
                 })
 
             }
@@ -252,7 +252,15 @@ function EventForm({ mode, initialData }: EventFormProps) {
                                         type="date"
                                         className="w-full"
                                         value={field.value ? new Date(field.value).toISOString().split('T')[0] : ''}
-                                        onChange={(e) => field.onChange(new Date(e.target.value))}
+                                        onChange={(e) => {
+                                            const value = e.target.value;
+                                            const parsed = new Date(value);
+                                            if (!isNaN(parsed.getTime())) {
+                                                field.onChange(parsed);
+                                            } else {
+                                                field.onChange(null); // or leave unchanged, based on your preference
+                                            }
+                                        }}
                                         onBlur={field.onBlur}
                                         name={field.name}
                                         ref={field.ref}
@@ -300,7 +308,10 @@ function EventForm({ mode, initialData }: EventFormProps) {
                                         min="1"
                                         placeholder="Enter number of tickets"
                                         {...field}
+                                        value={field.value ?? ""}
+                                        onChange={(e) => field.onChange(Number(e.target.value))}
                                     />
+
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
