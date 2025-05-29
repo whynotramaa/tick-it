@@ -1,7 +1,7 @@
 "use client"
 
 import { Id } from '@/convex/_generated/dataModel'
-import { useStorageUrl } from '@/lib/utils';
+// import { useStorageUrl } from '@/lib/utils';
 import { useQuery } from 'convex/react';
 import React from 'react'
 import Spinner from './Spinner';
@@ -15,7 +15,7 @@ function Ticket({ ticketId }: { ticketId: Id<"tickets"> }) {
     const user = useQuery(api.users.getUserById, {
         userId: ticket?.userId ?? "",
     });
-    const imageUrl = useStorageUrl(ticket?.event?.imageStorageId);
+    // const imageUrl = useStorageUrl(ticket?.event?.imageStorageId);
 
     if (!ticket || !ticket.event || !user) {
         return (<div className='flex justify-center items-center'><Spinner /></div>);

@@ -143,7 +143,7 @@ function EventPage() {
                                     {user ? (
                                         <JoinQueue
                                             eventId={params.id as Id<"events"> }
-                                            userId={user.id}
+                                            userId={user.id as Id<"users">}
                                         />
                                     ) : (
                                         <SignInButton>

@@ -4,7 +4,7 @@ import { api } from "@/convex/_generated/api"
 import { useUser } from "@clerk/nextjs"
 import { useQuery } from "convex/react"
 import { Ticket } from "lucide-react"
-import { useRouter } from "next/navigation"
+// import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
 import ReleaseTicket from "./ReleaseTicket"
 import { Id } from "@/convex/_generated/dataModel"
@@ -13,7 +13,7 @@ import { createStripeCheckoutSession } from "@/actions/createStripeCheckoutSessi
 
 function PurchaseTicket({ eventId }: { eventId: Id<"events"> }) {
     const { user } = useUser()
-    const router = useRouter()
+    // const router = useRouter()
     const queuePosition = useQuery(api.waitingList.getQueuePosition, {
         eventId,
         userId: user?.id ?? "",

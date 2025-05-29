@@ -30,6 +30,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+        {/* Optional meta tags, open graph, etc. */}
+      </head>
       <body
         className={`${questrial.variable} antialiased`} // Apply the Questrial font variable
       >
