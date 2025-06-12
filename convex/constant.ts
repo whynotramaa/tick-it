@@ -12,6 +12,7 @@ export const WAITING_LIST_STATUS: Record<string, Doc<"waitingList">["status"]> =
 } as const
 
 export const TICKET_STATUS: Record<string, Doc<"tickets">["status"]> = {
+    CONFIRMED: "confirmed",
     VALID:"valid",
     USED:"used",
     REFUNDED:"refunded",

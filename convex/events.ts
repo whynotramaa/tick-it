@@ -171,9 +171,9 @@ export const purchaseTicket = mutation({
             // Create ticket with payment info
             await ctx.db.insert("tickets", {
                 eventId,
-                userId,
+                userId: waitingListEntry.userId,
                 purchasedAt: Date.now(),
-                status: TICKET_STATUS.VALID,
+                status: TICKET_STATUS.CONFIRMED,
                 paymentIntentId: paymentInfo.paymentIntentId,
                 amount: paymentInfo.amount,
             });

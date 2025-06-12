@@ -21,9 +21,18 @@ export default function TicketCard({ ticketId }: { ticketId: Id<"tickets"> }) {
             ? "refunded"
             : isPastEvent
                 ? "used"
-                : "valid";
+                : "confirmed";
 
     const statusConfig = {
+        confirmed: {
+            status: "Confirmed",
+            bg: "bg-gradient-to-br from-emerald-50 to-green-50",
+            text: "text-emerald-700",
+            border: "border-emerald-200",
+            badge: "bg-emerald-100 text-emerald-800 border-emerald-200",
+            dot: "bg-emerald-500",
+            glow: "shadow-emerald-100",
+        },
         valid: {
             status: "Valid",
             bg: "bg-gradient-to-br from-emerald-50 to-green-50",
